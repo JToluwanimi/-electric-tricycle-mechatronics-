@@ -1,0 +1,16 @@
+```csv
+Item,Component,Model/Specification,Quantity,Unit_Price_USD,Total_USD,Source,Notes
+1,Chassis,Steel tubular frame,1,80.00,80.00,Fabricated,Locally welded
+2,Suspension,Front fork with shocks,1,40.00,40.00,Purchased,Off-the-shelf
+3,Motor,BLDC Hub Motor,1,100.00,100.00,Purchased,48V
+4,Motor Controller,BLDC 48V Controller,1,45.00,45.00,Purchased,With throttle
+5,Battery,48V Lead-Acid or Li-ion Pack,1,150.00,150.00,Purchased,Size dependent
+6,DC-DC Converter,48V to 12V,1,15.00,15.00,Purchased,For electronics
+7,Microcontroller,Arduino Mega 2560,1,15.00,15.00,Existing,Already owned
+8,Display,DWIN 7in V647 HMI,1,55.00,55.00,Purchased,Serial UART
+9,Speed Sensor,Hall Effect Sensor,1,3.00,3.00,Local,With magnet
+10,Voltage Divider,R1=110kOhm + R2=10kOhm,1,0.50,0.50,Local,1% tolerance
+11,Wiring,Assorted cables + connectors,1,20.00,20.00,Local,Power + signal
+12,Switches,Handlebar switches,1,10.00,10.00,Local,For lights/horn
+,,,,TOTAL,533.50,,Cost approximate 2024
+```
