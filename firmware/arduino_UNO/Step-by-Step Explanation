@@ -1,0 +1,24 @@
+#  Step-by-Step Explanation
+
+##  GPS Longitude Processing
+1. Initializes USART0 for GPS Communication at 9600 baud.
+2. Reads GPS data byte-by-byte and extracts longitude.
+3. Converts longitude into a whole number (2-3 digits).
+4. Sends longitude to DWIN HMI via USART1.
+
+##  DWIN HMI LED Control
+1. Listens for DWIN commands via USART1.
+2. Checks if the received command matches the LED control address (0x0483).
+3. If command = 1, turns the LED ON (PORTB |= (1 << LED_PIN);).
+4. If command = 0, turns the LED OFF (PORTB &= ~(1 << LED_PIN);).
+
+##  DWIN HMI Longitude Display
+1. Uses DWIN Protocol Format (0x5A, 0xA5 header).
+2. Sends 7-byte command to display longitude on DWIN screen.
+3. Transmits high and low bytes separately for compatibility.
+
+##  Why This is Efficient?
+✔ Bare-Metal USART Handling → No SoftwareSerial, direct register-based communication.
+✔ Direct Pin Manipulation → Uses PORTB instead of digitalWrite() for faster execution.
+✔ Efficient GPS Parsing → Minimal processing, avoids unnecessary operations.
+✔ Low-Latency Serial Processing → Non-blocking execution, ensuring smooth real-time performance.
